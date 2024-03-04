@@ -1,0 +1,1380 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    position: fixed;
+    background: white;
+    width: 100%;
+    top:0;
+    z-index: 99999;
+}
+
+main{
+    margin-top: 100px;
+}
+@media screen and (min-width: 1024px){
+    header{
+        position: initial;
+        z-index: 9999;
+    }
+    main{
+        margin-top: 0px;
+    }
+}
+/*------------------hamburger-menu------------------------*/
+.hamburger-menu{
+    width: 30%;
+    display: flex;
+}
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #492929;
+    transition-duration: .25s;
+  }
+  
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #dfdfdf;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: rgb(66, 53, 53);
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    background-color: white;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  .logo{
+    width: 70px;
+    margin: 10px;
+}
+.logo-ramme{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: sticky;
+    background-color: white;
+    height: 150px;
+
+}
+
+.nav{
+   position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999999;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+  /*------------------Menu bar ------------------------*/
+  .nav{
+    display: none;
+    background-color: white;
+  }
+
+  .forsideText{
+    position: absolute;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .forside-h1{
+    font-size: 14vh;
+  }
+  .forside-h2{
+    font-size: 10vh;
+  }
+
+  .forsideBilde{
+    display: flex;
+    justify-content: right;
+  }
+
+  .cv-bilde{
+    width: 55%;
+    border-radius: 25%;
+  }
+
+  .grafisk-box{
+    width: 100%;
+  }
+  .forside-knapp-ramme{
+    width: 100% ;
+    margin-left: 350px;
+    margin-top: 25px;
+  }
+
+  .btn-styles{
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: #6666665a 2.5px 2.5px;
+    font-size: 25px;
+  }
+  
+.tekst-footer{
+    width: 100%;
+    font-size: smaller;
+    font-family: aviano-sans, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+/* prøve footer
+
+/* Legg til tidligere stildefinisjoner her */
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-left h3, .footer-center h3, .footer-right h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center li {
+    margin-bottom: 10px;
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer-right .social-icons {
+    display: flex;
+}
+
+.footer-right .social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons i {
+   width: 50%;
+   color: white;
+   padding: 5px;
+
+}
+
+i:hover{
+    color: rgb(198, 198, 198);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Forsiden til portofolien */
+
+
+/* scroll on top */
+/* Style for scroll-to-top button */
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    font-size: 24px;
+    background-color: #662483;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scroll-to-top:hover {
+    background-color: #662483;
+    transform: scale(1.1);
+}
+
+/*studie-                   flow-1, flow-2, flow-3, flow-4                 */
+.container-studie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  .forsider{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    position: relative;
+    padding: 10px;
+    
+  }
+
+  h2, h3{
+    font-family: 'Lato', sans-serif;
+  }
+
+  .bilde-studie{
+    width: 80%;
+    justify-content: center;
+    display: block;
+    height: auto;
+    border-radius: 20px;
+  }
+
+
+  .back_icon a{
+    color: black;
+    padding: 5px;
+  }
+
+/*-------------------------------------flow 1-----------------------------------*/
+/* Style the big-div container */
+.big-div {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the project title */
+.overskrift-flow1 {
+    font-size: 17vh;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Style the project description */
+.tekst-flow1 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    width: 80%; 
+    font-family: 'Lato', sans-serif;
+}
+
+.text-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the images */
+.org-ramme, .ph-ramme {
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.org-bilde, .ph-bilde {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    height: auto;
+}
+
+/* Style the back button */
+.back_icon {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.back_icon a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 20px;
+}
+
+/* Add some spacing between sections */
+.prosjekt-cards {
+    margin-top: 20px;
+}
+/*----------------------------------flow 2------------------------------------------*/
+
+.overskrit-album3{
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.album-ramme{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.albumcover-ramme, .lp-ramme{
+    margin-bottom: 10px;
+}
+
+.mood-ramme{
+    width: 100%;
+    margin-bottom: 25px;
+    align-content: center;
+}
+.mood-bilde{
+    width: 30%;
+}
+.figma-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    color: black;
+}
+.figma-link:hover{
+    text-decoration: dotted;
+}
+  
+.back_icon a{
+    color: black;
+  }
+
+/*----------------------------------------flow 3-----------------------------------*/
+
+.website-ramme1, .website-ramme2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.forside-web{
+    width: 90%;
+}
+
+.demokrati{
+    width: 90%;
+}
+
+.design-ramme{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 50px;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.footer-ramme{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.footer-bilde{
+    width: 85%
+}
+.website-ramme3, .website-ramme4{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.mobil-web, .mobil-web2{
+    width: 50%;
+}
+
+.luft{
+    width: 100%;
+    display: flex;
+    padding: 50px;
+}
+
+
+.link-hjemmeside{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    color: black;
+}
+.link-hjemmeside a:hover{
+    text-decoration: underline;
+    color: black;
+}
+.back_icon a{
+    color: black;
+  }
+/*----------------------------------------------flow 4---------------------------------------*/
+.back_icon a{
+    color: black;
+  }
+  .sek-5{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  .video-5{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sek-15{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 40px;
+    padding: 5px;
+  }
+  .video-15{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .sek-30{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 40px;
+    padding: 5px;
+  }
+  .video-30{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+  }
+
+  .naked-figma{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .sekunder-desktop{
+    display: none;
+  }
+/*-----------------------------------------------flow 5---------------------------*/
+
+.back_icon a{
+    color: black;
+  }
+  .lille-mood{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  
+  
+
+  .overskrift-wireframes{
+    width: 80%;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+  .wireframe{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  .wireframe-1, .wireframe-2, .wireframe-3{
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .mood-ramme-1{
+    width: 50%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .mood-bilde-1{
+    width: 400px;
+  }
+  .overskrift-mood-bilde{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 150px;
+    font-weight: bolder;
+  }
+  
+  .tekst-mood{
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 20px 20px 20px;
+    width: 50%;
+  }
+  .design-overskrift{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 150px;
+    font-weight: bold;
+  }
+
+ 
+.ramme-motiver{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.motiv-1, .motiv-2{
+    width: 150px;
+}
+.tekst-typo{
+    width: 100%;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.overskrift-typo{
+    display: none;
+}
+.ramme-skrift{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.bilde-skrift-1, .bilde-skrift-2{
+    width: 300px;
+}
+
+.story-tekst{
+    display: none;
+}
+
+  .sitemap-overskrift{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+  }
+  .sitemap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .sitemap-bilde{
+    width: 300px;
+    padding: 10px;
+  }
+  .tekst-sitemap{
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 20px 20px 20px; 
+  }
+  .wbs-overskrift{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+
+  .wbs-ramme, .pbs-ramme{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  .wbs-bilde, .pbs-bilde{
+    width: 90px;
+  }
+  
+/*-----------------------------------------------flow 6---------------------------*/
+.ux-persona-1{
+    width: 30%;
+}
+.ux-persona-2{
+    width: 50%;
+}
+.figmaStart{
+    width: 37.5%;
+}
+.figmaFront{
+    width: 37.5%;
+}
+.figmaP{
+    width: 25%;
+}
+.figma-bestilling{
+    width: 25%;
+}
+.figma-plane{
+width: 37.5%;
+}
+
+.ux-frontMock{
+    width: 80%;
+}
+
+.tre-poster{
+    width: 30%;
+}
+
+
+
+/*-----------------------------------------------flow 7---------------------------*/
+.bootstrap{
+    width: 80%;
+}
+.rock{
+    width: 80%;
+}
+
+/*-----------------------------------------------flow 8---------------------------*/
+.content-1{
+    width: 45%;
+}
+.content-2{
+    width: 50%;
+}
+/*-----------------------------------------------flow 9---------------------------*/
+/*-----------------------------------------------flow 10---------------------------*/
+.bs{
+    width: 40%;
+    margin-top: 40px;
+}
+.test-c{
+    width: 45%;
+}
+/*-----------------------------------------------flow 11---------------------------*/
+.pip-forside{
+    width: 80%;
+}
+
+.text-box-air{
+    margin-top: 15px;
+}
+
+.butikk-1{
+    width: 6%;
+}
+
+
+/*-----------------------------------------------flow 12---------------------------*/
+/*-----------------------------------------------flow 13---------------------------*/
+/*-----------------------------------------------flow 14---------------------------*/
+/*-------------------------Portofolie-----------------------------*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boks{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.boks-bred{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.logo1{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.logo2{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.logo3{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.logo4{
+    width: 50%;
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+.banner-weeknd{
+    width: 90%;
+    padding: 10px;
+}
+.logo6{
+    display: block;
+    height: auto;
+}
+.poster{
+    width: 50%;
+    display: block;
+    height: auto;
+    padding: 10px;
+}
+
+/*------------------Om mig-------------------*/
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #662483;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5d2177;
+}
+
+/*-----------------------------------DESKTOP LAYOUT---------------------------------------------*/
+
+@media screen and (min-width: 1024px){
+/*-----------------------------------------forside ----------------------------------------*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        /* align-content: baseline; */
+        font-size: 6vh;
+    }
+    #active{
+        text-decoration: underline;
+    }
+    
+    .logo-ramme{
+        display: flex;
+        margin-top: 5px;
+        position: sticky;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    .logo{
+        width: 60%;
+        margin-left: 20px;
+    }
+    .overskrift-forside{
+        font-size:7vh;
+        margin-top: 20px;
+    }
+    span{
+        font-size: 4vh;
+        justify-content: left;
+    }
+    .knapp{
+    box-shadow: 4px 4px 6px 0;
+    font-size: 20px;
+    height: 40px;
+    width: 165px;
+    background-color: #492929;
+    color: #CFD8DC;
+    border-radius: 4px;
+    border: none;
+    background:-moz-linear-gradient(#5a3434);
+    margin: 10px;
+    margin-top: 100px;
+    }
+    .bilde-meg{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .forside-bilde-meg{
+        width: 450px;
+    }
+    .forside-ramme{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .navnet{
+        font-size: 12vh;
+        width: 100%;
+        height: 0;
+        margin: 0;
+
+    }
+    .multi{
+        width: 100%;
+        margin-top: 0;
+        font-size: larger;
+        margin-bottom: 40px;
+        color: grey;
+        display: none;
+    }
+    .velkommen{
+        width: 100%;
+        font-size: 5vh;
+        margin-top: 0;
+        color: #59515143;
+    }
+    /*--------------------------------------studie--------------------------------------*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .banner-studie{
+        width: 100%;
+    }
+    .banner1{
+        width: 100%;
+    }
+    .forsider p, .fed-flow{
+        font-size: 4vh;
+    }
+    .bilde-studie{
+        width: 95%;
+    }
+    .forsider{
+        width: 25%;
+    }
+    
+    /*---------------------------------------------------Portofolie------------------------------*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /*---om mig---*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .banner-studie{
+        width: 100%;
+    }
+    .banner1{
+        width: 100%;
+    }
+    .tekst-meg{
+        width: 60%;
+        padding: 10px;
+        justify-content: center;
+        font-size: 3vh;
+        font-family: roboto, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    /*---------------------------------------------------------------flow 1---*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .overskrift-flow1{
+        font-size: 7vh;
+    }
+    .tekst-flow1{
+        font-size: 4vh;
+        padding: 35px;
+    }
+    .tekst-flow12{
+        font-size: 4vh;
+        padding: 35px;
+    }
+    /*-----------------------------------------------------flow 2---*/
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .overskrit-album3{
+        font-size: 7vh;
+    }
+    .album-tekst, .album-tekst1, .figma-link{
+        font-size: 4vh;
+    }
+    
+    .lp-bilde{
+        width: 90%;
+    }
+    .album-bilde{
+        width: 90%;
+    }
+    .mood-bilde{
+        margin-bottom: 20px;
+    }
+    
+    /*------------------------------------------------------flow 3---*/ 
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .overskrift-flow3{
+        font-size: 7vh;
+    }
+    .flow-3tekst{
+        font-size: 4vh;
+    }
+    .design-ramme, .link-hjemmeside{
+        font-size: 4vh;
+    }
+    
+    /*----------------------------------------------------------flow 4---*/ 
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .video-5{
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .sek-5{
+        display: none;
+    }
+    .sek-15{
+        display: none;
+    }
+    .video-15{
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sek-30{
+        display: none;
+    }
+    .video-30{
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+    }
+    .sekunder-desktop{
+        display: block;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        font-family: roboto, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .overskrift-4{
+        font-size: 7vh;
+    }
+    .tekst-4{
+        font-size: 4vh;
+        margin-bottom: 20px;
+    }
+    /*---------------------------------------------------flow 5---*/ 
+    .nav{
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        
+    }
+    .logo-ramme{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .overskrift-5{
+        font-size: x-large;
+    }
+    .lille-mood{
+        font-size: 5vh;
+    }
+    .linje-1{
+        width: 400px;
+    }
+    .tekst-wireframe{
+        font-size: 4vh;
+    }
+    .overskrift-wireframes{
+        font-size: 5vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+   .wireframe-1, .wireframe-2, .wireframe-3{
+    width: 310px;
+   }
+
+   .overskrift-mood-bilde{
+    font-size: 5vh;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   }
+   .tekst-mood p{
+    font-size: 4vh;
+    margin-bottom: 30px;
+   }
+   .design-overskrift{
+    font-size: 5vh;
+   }
+    .tekst-design1{
+        font-size: 4vh;
+        display: flex;
+        width: 100%;
+    }
+    .ramme-motiver{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .motiv-1{
+        width: 450px;
+        padding: 0 40px 10px 0;
+    }
+    .motiv-2{
+        width: 450px;
+        padding: 0 40px 10px 0;
+    }
+    .overskrift-typo{
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 4vh;
+        margin-top: 40px;
+        font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .tekst-typo{
+        width: 45%;
+        margin-bottom: 50px;
+    }
+    .tekst-typo p{
+        font-size: 4vh;
+        display: flex;
+    
+
+    }
+    .bilde-skrift-1{
+        width: 100%;
+    }
+    .bilde-skrift-2{
+        width: 100%;
+    }
+    .ramme-skrift{
+        display: flex;
+        width: 50%;
+        margin-top: 25px;
+    }
+    .ramme-story{
+        width: 50%;
+    }
+    .story-tekst{
+        display: block;
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .story-tekst p{
+        padding: 0 20px 0 20px;
+        font-size: 4vh;
+        font-family: roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .story-overskrift{
+        margin-top: 70px;
+    }
+    .story-overskrift, .brugertest-overskrift, .sitemap-overskrift, .wbs-overskrift{
+        font-size: 5vh;
+    }
+
+    .brugertest-t{
+        font-size: 4vh;
+        margin-bottom: 30px;
+    }
+    .brugertest-overskrift{
+        margin-top: 50px;
+    }
+
+    .wbs-ramme{
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      .wbs-bilde, .pbs-bilde{
+        width: 600px;
+      }
+      .pbs-ramme{
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+   
+
+    .sitemap{
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+   
+    .sitemap-bilde{
+        width: 700px;
+    }
+    .overskrift-5{
+        font-size: 7vh;
+    }
+    
+}
